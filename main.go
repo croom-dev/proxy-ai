@@ -11,7 +11,8 @@ import (
 var httpClient = &http.Client{}
 
 func main() {
-
+	log.Println("AI Proxy running ...")
+	
 	r := gin.Default()
 
 	r.Any("/openai/*path", func(c *gin.Context) {
@@ -30,7 +31,7 @@ func main() {
 
 	r.Run(":8888")
 
-	log.Println("AI Proxy running")
+	log.Println("AI Proxy running ...")
 }
 
 func Proxy(
