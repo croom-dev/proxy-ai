@@ -2,7 +2,9 @@ package main
 
 import (
 	"io"
+	"log"
 	"net/http"
+
 	"github.com/gin-gonic/gin"
 )
 
@@ -27,6 +29,8 @@ func main() {
 	})
 
 	r.Run(":8888")
+
+	log.Println("AI Proxy running")
 }
 
 func Proxy(
